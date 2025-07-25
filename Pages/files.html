@@ -1,0 +1,725 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this file,
+   - You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr" platform="linux" style="--font-family: sans-serif; --font-weight: normal;"><head>
+    <title id="reader-title">The Epstein Files: Trump, Trafficking, and the Unraveling Cover-Up - Divisions by zero</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src chrome:; img-src data: *; media-src *; object-src 'none'">
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width; user-scalable=0">
+    <link rel="stylesheet" href="chrome://global/skin/design-system/tokens-brand.css">
+    <link rel="stylesheet" href="chrome://global/skin/aboutReader.css" type="text/css">
+    <link rel="localization" href="toolkit/about/aboutReader.ftl">
+    <link rel="localization" href="toolkit/branding/brandings.ftl">
+    <script type="module" src="chrome://global/content/reader/moz-slider.mjs"></script>
+    <script type="module" src="chrome://global/content/elements/moz-input-color.mjs"></script>
+    <script type="module" src="chrome://global/content/elements/named-deck.js"></script>
+  <link rel="stylesheet" href="chrome://global/skin/narrate.css"></head>
+
+  <body class="dark loaded" style="--content-width: 30em; --font-size: 20px;">
+    <div class="top-anchor"></div>
+
+    <div id="toolbar" class="toolbar-container">
+      <div class="toolbar reader-toolbar">
+        <div class="reader-controls" articledir="ltr">
+          <button class="close-button toolbar-button" aria-labelledby="toolbar-close" data-telemetry-id="reader-close">
+            <span class="hover-label" id="toolbar-close" data-l10n-id="about-reader-toolbar-close">Close Reader View</span>
+          </button>
+          <ul class="dropdown text-layout-dropdown">
+            <li>
+              <button class="dropdown-toggle toolbar-button text-layout-button" aria-labelledby="toolbar-text-layout-controls" data-telemetry-id="reader-text-layout-controls">
+                <span class="hover-label" id="toolbar-text-layout-controls" data-l10n-id="about-reader-toolbar-text-layout-controls">Text and layout</span>
+              </button>
+            </li>
+            <li class="dropdown-popup" id="text-layout-controls" tabindex="-1">
+              <h2 data-l10n-id="about-reader-text-header" id="about-reader-text-header">Text</h2>
+              <div id="text-size-controls">
+                <span data-l10n-id="about-reader-text-size-label" id="about-reader-text-size-label">Text size</span>
+                <div class="text-size-buttons buttonrow">
+                  <button class="text-size-minus-button" data-l10n-id="about-reader-toolbar-minus" data-telemetry-id="text-size-minus-button" title="Decrease font size"></button>
+                  <button class="text-size-plus-button" data-l10n-id="about-reader-toolbar-plus" data-telemetry-id="text-size-plus-button" title="Increase font size"></button>
+                </div>
+              </div>
+              <div id="font-controls">
+                <div id="font-type-dropdown" class="dropdown-selector">
+                  <label for="font-type-selector" data-l10n-id="about-reader-font-type-selector-label">Font</label>
+                  <select name="font-type-selector" id="font-type-selector" data-telemetry-id="font-type-selector"><option data-l10n-id="about-reader-font-type-sans-serif" value="sans-serif" selected="selected">Sans-serif</option><option data-l10n-id="about-reader-font-type-serif" value="serif">Serif</option><option data-l10n-id="about-reader-font-type-monospace" value="monospace">Monospace</option></select>
+                </div>
+                <div id="font-weight-dropdown" class="dropdown-selector">
+                  <label for="font-weight-selector" data-l10n-id="about-reader-font-weight-selector-label">Font weight</label>
+                  <select name="font-weight-selector" id="font-weight-selector" data-telemetry-id="font-weight-selector"><option data-l10n-id="about-reader-font-weight-regular" value="regular" selected="selected">Regular</option><option data-l10n-id="about-reader-font-weight-light" value="light">Light</option><option data-l10n-id="about-reader-font-weight-bold" value="bold">Bold</option></select>
+                </div>
+              </div>
+              <hr>
+              <h2 data-l10n-id="about-reader-layout-header" id="about-reader-layout-header">Layout</h2>
+              <div id="content-width-slider" class="slider-container"><moz-slider min="1" max="9" value="3" ticks="9" tick-labels="[]" data-l10n-id="about-reader-content-width-label" data-l10n-attrs="label" slider-icon="chrome://global/skin/reader/content-width-20.svg" data-telemetry-id="content-width-slider" label="Content width"></moz-slider></div>
+              <div id="line-spacing-slider" class="slider-container"><moz-slider min="1" max="9" value="4" ticks="9" tick-labels="[]" data-l10n-id="about-reader-line-spacing-label" data-l10n-attrs="label" slider-icon="chrome://global/skin/reader/line-spacing-20.svg" data-telemetry-id="line-spacing-slider" label="Line spacing"></moz-slider></div>
+              <hr>
+              <details id="about-reader-advanced-layout">
+                <summary class="accordion-header">
+                  <h2 data-l10n-id="about-reader-advanced-layout-header" id="about-reader-advanced-layout-header">Advanced</h2>
+                  <span class="chevron-icon"></span>
+                </summary>
+                <div id="character-spacing-slider" class="slider-container"><moz-slider min="1" max="9" value="0" ticks="9" tick-labels="[&quot;Standard&quot;, &quot;Wide&quot;]" data-l10n-id="about-reader-character-spacing-label" data-l10n-attrs="label" slider-icon="chrome://global/skin/reader/character-spacing-20.svg" data-telemetry-id="character-spacing-slider" label="Character spacing"></moz-slider></div>
+                <div id="word-spacing-slider" class="slider-container"><moz-slider min="1" max="9" value="0" ticks="9" tick-labels="[&quot;Standard&quot;, &quot;Wide&quot;]" data-l10n-id="about-reader-word-spacing-label" data-l10n-attrs="label" slider-icon="chrome://global/skin/reader/word-spacing-20.svg" data-telemetry-id="word-spacing-slider" label="Word spacing"></moz-slider></div>
+                <label for="text-alignment-buttons" data-l10n-id="about-reader-text-alignment-label">Text alignment</label>
+                <div class="text-alignment-buttons radiorow" id="text-alignment-buttons"><input id="radio-itemleft-align-button" type="radio" class="radio-button" name="text-alignment" data-telemetry-id="left-align-button" checked="checked"><label for="radio-itemleft-align-button" class="left-align-button" data-l10n-id="about-reader-text-alignment-left" checked="true" title="Align text left"></label><input id="radio-itemcenter-align-button" type="radio" class="radio-button" name="text-alignment" data-telemetry-id="center-align-button"><label for="radio-itemcenter-align-button" class="center-align-button" data-l10n-id="about-reader-text-alignment-center" title="Align text center"></label><input id="radio-itemright-align-button" type="radio" class="radio-button" name="text-alignment" data-telemetry-id="right-align-button"><label for="radio-itemright-align-button" class="right-align-button" data-l10n-id="about-reader-text-alignment-right" title="Align text right"></label><input id="radio-itemjustify-align-button" type="radio" class="radio-button" name="text-alignment" data-telemetry-id="justify-align-button"><label for="radio-itemjustify-align-button" class="justify-align-button" data-l10n-id="about-reader-text-alignment-justify" title="Justify text"></label></div>
+                <button class="text-layout-reset-button reset-button" data-l10n-id="about-reader-reset-button">Reset defaults</button>
+              </details>
+            </li>
+          </ul>
+          <ul class="dropdown colors-dropdown">
+            <li>
+              <button class="dropdown-toggle toolbar-button colors-button" aria-labelledby="toolbar-color-controls" data-telemetry-id="reader-color-controls">
+                <span class="hover-label" id="toolbar-color-controls" data-l10n-id="about-reader-toolbar-theme-controls">Theme</span>
+              </button>
+            </li>
+            <li class="dropdown-popup" id="color-controls">
+              <h2 data-l10n-id="about-reader-colors-menu-header" id="about-reader-colors-menu-header">Theme</h2>
+              <button-group aria-labelledby="about-reader-colors-menu-header" role="tablist">
+                <button is="named-deck-button" deck="tabs-deck" name="fxtheme" data-l10n-id="about-reader-fxtheme-tab" data-telemetry-id="colors-menu-default-tab" id="tabs-deck-button-fxtheme" role="tab" aria-selected="true" tabindex="0" selected="">Default</button>
+                <button is="named-deck-button" deck="tabs-deck" name="customtheme" data-l10n-id="about-reader-customtheme-tab" data-telemetry-id="colors-menu-custom-tab" id="tabs-deck-button-customtheme" role="tab" aria-selected="false" tabindex="-1">Custom</button>
+              </button-group>
+              <named-deck id="tabs-deck" is-tabbed="" selected-view="fxtheme">
+                <div name="fxtheme" class="color-scheme-buttons radiorow" aria-labelledby="tabs-deck-button-fxtheme" role="tabpanel" slot="selected"><input id="radio-itemauto-button" type="radio" class="radio-button" name="color-scheme" data-telemetry-id="auto-button" checked="checked"><label for="radio-itemauto-button" class="auto-button" data-l10n-id="about-reader-color-auto-theme" checked="true" title="Auto theme">Auto</label><input id="radio-itemlight-button" type="radio" class="radio-button" name="color-scheme" data-telemetry-id="light-button"><label for="radio-itemlight-button" class="light-button" data-l10n-id="about-reader-color-light-theme" title="Light theme">Light</label><input id="radio-itemdark-button" type="radio" class="radio-button" name="color-scheme" data-telemetry-id="dark-button"><label for="radio-itemdark-button" class="dark-button" data-l10n-id="about-reader-color-dark-theme" title="Dark theme">Dark</label><input id="radio-itemsepia-button" type="radio" class="radio-button" name="color-scheme" data-telemetry-id="sepia-button"><label for="radio-itemsepia-button" class="sepia-button" data-l10n-id="about-reader-color-sepia-theme" title="Sepia theme">Sepia</label><input id="radio-itemcontrast-button" type="radio" class="radio-button" name="color-scheme" data-telemetry-id="contrast-button"><label for="radio-itemcontrast-button" class="contrast-button" data-l10n-id="about-reader-color-contrast-theme" title="Contrast theme">Contrast</label><input id="radio-itemgray-button" type="radio" class="radio-button" name="color-scheme" data-telemetry-id="gray-button"><label for="radio-itemgray-button" class="gray-button" data-l10n-id="about-reader-color-gray-theme" title="Gray theme">Gray</label></div>
+                <div name="customtheme" aria-labelledby="tabs-deck-button-customtheme" role="tabpanel" slot="">
+                  <ul class="custom-colors-selection"><li><moz-input-color name="foreground" data-l10n-id="about-reader-custom-colors-foreground2" value="#14151A" data-l10n-attrs="label" label="Text" title="Edit color"></moz-input-color></li><li><moz-input-color name="background" data-l10n-id="about-reader-custom-colors-background2" value="#FFFFFF" data-l10n-attrs="label" label="Background" title="Edit color"></moz-input-color></li><li><moz-input-color name="unvisited-links" data-l10n-id="about-reader-custom-colors-unvisited-links2" value="#0060DF" data-l10n-attrs="label" label="Unvisited links" title="Edit color"></moz-input-color></li><li><moz-input-color name="visited-links" data-l10n-id="about-reader-custom-colors-visited-links2" value="#321C64" data-l10n-attrs="label" label="Visited links" title="Edit color"></moz-input-color></li><li><moz-input-color name="selection-highlight" data-l10n-id="about-reader-custom-colors-selection-highlight2" value="#FFFFCC" data-l10n-attrs="label" label="Highlighter for read aloud" title="Edit color"></moz-input-color></li></ul>
+                  <button class="custom-colors-reset-button reset-button" data-l10n-id="about-reader-reset-button" hidden="">Reset defaults</button>
+                </div>
+              </named-deck>
+            </li>
+          </ul>
+        <ul class="dropdown narrate-dropdown"><li><button class="dropdown-toggle toolbar-button narrate-toggle" data-telemetry-id="reader-listen" aria-label="Read aloud (N)" hidden=""><span class="hover-label">Read aloud (N)</span></button></li><li class="dropdown-popup"><h2 id="narrate-header">Read aloud</h2><div class="narrate-row narrate-control"><button class="narrate-skip-previous" disabled="disabled" aria-keyshortcuts="ArrowLeft" title="Back (←)"></button><button class="narrate-start-stop" aria-keyshortcuts="N" title="Start (N)"></button><button class="narrate-skip-next" disabled="disabled" aria-keyshortcuts="ArrowRight" title="Forward (→)"></button></div><div class="narrate-row narrate-rate"><span class="narrate-rate-icon slow" title="Slow down narration"></span><input class="narrate-rate-input" value="0" step="5" max="100" min="-100" type="range" aria-label="Choose a narration speed from -100 to 100, where 0 is the default speed." title="Speed"><span class="narrate-rate-icon fast" title="Speed up narration"></span></div><hr><h2 id="voice-header">Voice</h2><div class="narrate-row narrate-voices"><div class="voiceselect voice-select"><button class="select-toggle" aria-controls="voice-options" aria-expanded="false" role="combobox" aria-labelledby="voice-header">
+      <span class="current-voice"></span>
+    </button>
+    <div class="options" id="voice-options" role="listbox"></div></div></div></li></ul></div>
+      </div>
+    </div>
+
+    <div class="container" style="--line-height: 1.6em; --letter-spacing: -0.03em; --word-spacing: -0.05em; --text-alignment: start; --block-img-margin-right: unset; --block-img-margin-left: unset;" lang="en" dir="ltr">
+      <div class="header reader-header reader-show-element">
+        <a class="domain reader-domain" href="https://lemmy.dbzer0.com/post/49344563">lemmy.dbzer0.com</a>
+        <div class="domain-border"></div>
+        <h1 class="reader-title">The Epstein Files: Trump, Trafficking, and the Unraveling Cover-Up - Divisions by zero</h1>
+        <div class="credits reader-credits"></div>
+        <div class="meta-data">
+          <div class="reader-estimated-time" data-l10n-args="{&quot;range&quot;:&quot;26–33&quot;,&quot;rangePlural&quot;:&quot;other&quot;}" data-l10n-id="about-reader-estimated-read-time" dir="ltr">26–33 minutes</div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="content">
+        <div class="moz-reader-content reader-show-element"><div id="readability-page-1" class="page"><div tabindex="-1"><div><div><article><div><p>112</p></div></article></div><article id="postContent"><div><p dir="auto">Since the 1970s, <a href="https://en.wikipedia.org/wiki/Donald_Trump_sexual_misconduct_allegations" rel="noopener nofollow">27 women and children</a>
+ have publicly accused Donald Trump of rape, kissing and groping without
+ consent; looking under women’s skirts; and walking in on naked teenage 
+pageant contestants.</p>
+<p dir="auto">This post compiles everything known, leaked, and unsealed about Jeffrey Epstein’s network, with a special focus on <strong>Donald Trump’s connections</strong>, involvement, and reactions.</p>
+<p dir="auto">It’s always the ones you suspect most.</p>
+<p dir="auto">TW: everything</p>
+<hr>
+<h3 dir="auto">TRUMP &amp; EPSTEIN: TIMELINE &amp; DEEP BACKGROUND</h3>
+<p dir="auto"><strong>late 70s</strong></p>
+<ul dir="auto">
+<li>Through Roy Cohn, Trump gained access to Manhattan’s drug-fueled 
+disco scene which featured trafficked women and children. He is quoted 
+as saying <em><a href="https://www.dailykos.com/stories/2016/10/6/1578544/-The-Untold-Story-of-Trump-Model-Management-A-Daily-Kos-Exclusive-Part-1" rel="noopener nofollow">“I would watch supermodels getting screwed, well-known supermodels getting screwed, on a bench in the middle of the room.”</a></em></li>
+<li>Trump and Casablanca would cross paths at some point during the mid 
+70’s through Roy Cohn. Casablancas’ influence on Trump becomes obvious 
+when <a href="https://xcancel.com/opdeatheaters/status/1163151354581229568" rel="noopener nofollow">reading about both men</a></li>
+<li>John Casablancas, founder of Elite Model Management, <a href="https://www.nbcnews.com/news/us-news/former-model-claims-lawsuit-she-was-raped-teenager-agency-executive-n1276818" rel="noopener nofollow">prolific child rapist, and trafficker</a>. He later became Ivanka Trump’s manager, was a close associate of Trump, and <a href="https://www.dailykos.com/stories/2016/10/6/1578544/-The-Untold-Story-of-Trump-Model-Management-A-Daily-Kos-Exclusive-Part-1" rel="noopener nofollow">sat on the board of Trump Realty Brazil (2004)</a>
+<ul dir="auto">
+<li><em>Fun fact</em>: Father of Julian Casablancas of the Strokes. <a href="https://en.wikipedia.org/wiki/John_Casablancas" rel="noopener nofollow">Divorced Julian’s mother when he was “dating” a 16 year old. Married a 17 year old when he was 50 and Julian was 14</a>.</li>
+</ul>
+</li>
+<li>Jessica Leeds said that in the late 70s when she was a travelling 
+businesswoman she had sat beside Trump, whom she had never met before, 
+in the first-class cabin of a flight to New York. She alleged that about
+ 45 minutes after takeoff Trump lifted the armrest, grabbed her breasts 
+and tried to put his hand up her skirt. Leeds alleged Trump’s “hands 
+were everywhere”, describing them as <a href="https://www.theguardian.com/us-news/article/2024/sep/10/donald-trump-accuser-jessica-leeds" rel="noopener nofollow">“like an octopus”.</a></li>
+</ul>
+<p dir="auto"><strong>early 80s</strong></p>
+<ul dir="auto">
+<li>NaKina Carr, a runway model for Oscar de la Renta, in the early 
+1980s said: [B]ackstage in the models’ dressing room at one of his 
+fashion shows … She was getting ready when all of a sudden she heard 
+someone shout, <a href="https://www.theguardian.com/us-news/2020/mar/14/teen-models-powerful-men-when-donald-trump-hosted-look-of-the-year" rel="noopener nofollow">“Put
+ your robes on, here he comes!” “[… Trump] was gropey … he had his hands
+ in the most inappropriate places, always. [… But i]f you’re over 
+twenty-one, you don’t have to worry.”</a></li>
+</ul>
+<p dir="auto"><strong>late 80s</strong></p>
+<ul dir="auto">
+<li>Cathleen, a 15-year-old Swedish model, represented by Casablancas’ Elite Model Management <a href="https://imgur.com/0nxh5Ea" rel="noopener nofollow">said she met Trump in the mid-1980s at a party:</a>
+ “We had [agency parties] all the time, and [Trump] was there. I had no 
+idea who he was,” she told us. “He came in with two girls from the 
+agency and sat down at the other end to me. One of them was a Polish 
+model. She must have been sixteen, seventeen, definitely no older than 
+eighteen. He was all over her. Kissing her on her lips and neck and 
+touching her.” [emphasis added] Cathleen said there were about four men 
+at the dinner and about six models aged between fifteen and twenty — and
+ that there was nothing unusual in that. “This happened every week,” she
+ said of the dinners with older men. “You just have to show up…”</li>
+</ul>
+<p dir="auto"><strong>1989:</strong></p>
+<ul dir="auto">
+<li>Trump and Robert Maxwell, the Czechoslovak-born owner of London’s Daily Mirror tabloid and Ghislaine’s father, <a href="https://www.politico.com/story/2019/07/21/jeffrey-epstein-trump-clinton-1424120" rel="noopener nofollow">rubbed shoulders on the high-flying Manhattan party circuit</a>.</li>
+<li><a href="https://www.politico.com/story/2019/07/21/jeffrey-epstein-trump-clinton-1424120" rel="noopener nofollow">An item from a May 1989 gossip column</a> placed Trump and both Maxwells at a party aboard the elder Maxwell’s yacht, named the Lady Ghislaine.</li>
+<li>An Elite model, named Barabara Pilling, said: Trump asked her out 
+for dinner in the summer of 1989 […] She recalls Trump asking how old 
+she was. <a href="https://www.theguardian.com/us-news/2020/mar/14/teen-models-powerful-men-when-donald-trump-hosted-look-of-the-year" rel="noopener nofollow">“I said 17 and he said, ‘That’s just great — you’re not too old, not too young.’</a></li>
+<li><a href="https://www.thedailybeast.com/ex-wife-donald-trump-made-me-feel-violated-during-sex/" rel="noopener nofollow">Ivana Trump swears in divorce papers that Donald Trump raped her late in 1989 after a botched scalp‑reduction surgery.</a></li>
+</ul>
+<p dir="auto"><strong>1990:</strong></p>
+<ul dir="auto">
+<li><a href="https://archive.is/XCphW" rel="noopener nofollow">Epstein buys a property two miles north of Mar-a-Lago</a>.</li>
+</ul>
+<p dir="auto"><strong>1991:</strong></p>
+<ul dir="auto">
+<li><a href="https://xcancel.com/MeidasTouch/status/1946314087450964393" rel="noopener nofollow">Donald
+ Trump judges the 1991 Look of the Year modeling competition organized 
+by Elite Model Management, featuring participants as young at 
+14-years-old (Watch)</a>.
+<ul dir="auto">
+<li>A <a href="https://www.theguardian.com/us-news/2020/mar/14/teen-models-powerful-men-when-donald-trump-hosted-look-of-the-year" rel="noopener nofollow">2020 Guardian investigation</a>
+ into Elite’s Look of the Year competition uncovered allegations from 
+former contestants and industry insiders that the competition was used 
+by founder <strong>John Casablancas and others to engage in sexual relationships with vulnerable young models, some of whom were teenagers.</strong></li>
+<li>Shawna Lee, then a 14-year-old <a href="https://www.theguardian.com/us-news/2020/mar/14/teen-models-powerful-men-when-donald-trump-hosted-look-of-the-year" rel="noopener nofollow">recalls how the contestants were encouraged to parade downstairs, one by one, and dance for Trump, Casablancas and others</a>.</li>
+<li>Another contestant, who was 15 at the time, <a href="https://www.theguardian.com/us-news/2020/mar/14/teen-models-powerful-men-when-donald-trump-hosted-look-of-the-year" rel="noopener nofollow">also remembers being asked to walk for Trump</a>,
+ Casablancas and other men on the boat in September 1992. She says an 
+organiser told her that if she refused, she would be excluded from the 
+competition. “I knew in my gut it wasn’t right,” she recalls. “This 
+wasn’t being judged or part of the competition – it was for their 
+entertainment.”</li>
+</ul>
+</li>
+<li>A photo of <a href="https://miro.medium.com/v2/resize:fit:720/format:webp/1*Q5JV7OE_cC3JEFbD4nDZ2Q.jpeg" rel="noopener nofollow">Donald Trump’s hands sliding into 9-year-old Ivanka’s dress. Maybelline Presents 1991 Look of the Year at Plaza Hotel in NY</a>.</li>
+<li>At a yacht party for the contestants, <a href="https://www.theguardian.com/us-news/2020/mar/14/teen-models-powerful-men-when-donald-trump-hosted-look-of-the-year" rel="noopener nofollow">older men were seen grinding on the girls who were as young as 14-years-old</a>.</li>
+</ul>
+<p dir="auto"><strong>1992</strong>:</p>
+<ul dir="auto">
+<li>Trump directed Florida businessman George Houraney to organize a 
+“calendar girl” competition at Mar-a-Lago, and after 28 female 
+contestants were procured, revealed that the other guests were just “him
+ and Epstein.”
+<ul dir="auto">
+<li>“The girls were all decked out, expecting to meet all these VIPs.” 
+But after an hour at the party, Houraney says, there seemed to be only 
+one other guest: Epstein. <a href="https://www.theguardian.com/us-news/2020/mar/14/teen-models-powerful-men-when-donald-trump-hosted-look-of-the-year" rel="noopener nofollow">“I
+ was like, ‘Donald, where are the guys? What’s going on here?’ And he 
+said, ‘Well, this is it.’” Houraney says he realised “this is a Jeff 
+Epstein party, basically”.</a></li>
+<li>Mr. Houraney’s then-girlfriend and business partner, Jill Harth, 
+later accused Mr. Trump of sexual misconduct on the night of the party. 
+In a lawsuit, Ms. Harth said that Mr. Trump took her into a bedroom and 
+forcibly kissed and fondled her, and restrained her from leaving. She 
+also said that a 22-year-old contestant told her that Mr. Trump later 
+that night <a href="https://www.nytimes.com/2025/07/19/us/politics/inside-trump-epstein-friendship.html" rel="noopener nofollow">crawled into her bed uninvited</a>.</li>
+</ul>
+</li>
+<li>A 16 year old Stacy Wilkes and a former Canadian contestant of the 
+Trump sponsored 1992 “Elite’s Look of the Year” competition recalled: <a href="https://www.theguardian.com/us-news/2020/mar/14/teen-models-powerful-men-when-donald-trump-hosted-look-of-the-year" rel="noopener nofollow">“Every time we changed, it was like Trump would find a reason to come backstage,”</a>
+ Wilkes says. A Canadian contestant from 1992 recalls similar incidents.
+ “He’d come by and say, ‘Hey girls, are we ready?’” she says. “I 
+remember thinking, what have I got myself into?”</li>
+<li><a href="https://www.youtube.com/watch?v=KLcfpU2cubo" rel="noopener nofollow">NBC footage</a>
+  from that same year shows the two men partying together at the Palm 
+Beach resort with cheerleaders for the Buffalo Bills and Miami Dolphins,
+ laughing, chatting, and, in the case of Trump, pawing at women.</li>
+</ul>
+<p dir="auto"><strong>1993:</strong></p>
+<ul dir="auto">
+<li>Stacey Williams, <a href="https://archive.is/DNEAU#selection-365.19-365.66" rel="noopener nofollow">alleged in interviews in 2024</a> that <a href="https://xcancel.com/BlueATLGeorgia/status/1947028960316899424" rel="noopener nofollow"><em>“Jeffrey Epstein walked me into his office to be sexually assaulted by Trump.”</em></a>, who groped her while Jeffrey Epstein watched, she is the 27th woman to accuse Trump of sexual misconduct.  <a href="https://xcancel.com/CalltoActivism/status/1946997098651521446" rel="noopener nofollow">She even passed a polygraph and says Epstein confirmed it happened in an interview.</a></li>
+<li>Epstein and Maxwell also flew on Donald Trump’s plane: <a href="https://xcancel.com/MeidasTouch/status/1849225373541613789" rel="noopener nofollow">“They
+ did board with a young woman of indeterminate age. I wouldn’t be able 
+to tell if she was 15 or 20. She was quite dressed up and quite made up,
+ so it was hard to tell"</a></li>
+</ul>
+<p dir="auto"><strong>1993–1997:</strong></p>
+<ul dir="auto">
+<li>Trump flew on Epstein’s private jets seven times between Palm Beach,
+ New York, and DC. His name and contact details appear in Epstein’s 
+black book. <a href="https://www.documentcloud.org/documents/21165424-epstein-flight-logs-released-in-usa-vs-maxwell" rel="noopener nofollow">Flight logs</a>, <a href="https://heystacks.com/doc/1058/all-known-epstein-jet-flights" rel="noopener nofollow">Heystacks index</a>, <a href="https://joshwho.net/EpsteinList/black-book-unredacted.pdf" rel="noopener nofollow">Black Book PDF</a>.
+<ul dir="auto">
+<li>Trump’s name is circled in the book, and the <a href="https://www.youtube.com/watch?v=hsiKUXrlcac" rel="noopener nofollow">original leaker</a> stated that circled names represented known members of Epstein’s trafficking ring.</li>
+</ul>
+</li>
+<li>Chris Brenner, who managed supermodel Milla Jovovich’s career for 
+decades, worked as an agent at NEXT from 1993-99 and saw the industry’s 
+problems up close. <a href="https://variety.com/2023/film/news/fashion-models-sexual-abuse-financial-exploitation-unsafe-sets-1235648697/" rel="noopener nofollow">"I
+ would see Donald Trump backstage, and I’m like, ‘Why is he standing 
+there when there’s a 13-year-old changing? This is weird.’</a></li>
+</ul>
+<p dir="auto"><strong>1994:</strong></p>
+<ul dir="auto">
+<li><a href="https://cdn.factcheck.org/UploadedFiles/Johnson_TrumpEpstein_Lawsuit.pdf" rel="noopener nofollow">Katie Johnson</a> filed a lawsuit alleging Trump raped her at age 13 at Epstein’s NYC property.
+<ul dir="auto">
+<li>The plaintiff provided 2 witness affidavits and in her complaint 
+mentions a threat that if she ever talked she would ‘wind up like 
+Maria’. <a href="https://www.spreaker.com/episode/wayne-madsen-waterbury-the-city-that-holds-secrets-that-could-bring-down-trump--14482536" rel="noopener nofollow">Mr. Madsen believes he has identified Maria as an 11 year old girl that was abducted from in front of a Waterbury pizzeria.</a></li>
+<li>Johnson later <a href="https://www.newsweek.com/trump-teen-rape-allegation-national-enquirer-ronan-farrow-jane-doe-1465652" rel="noopener nofollow">withdrew the case</a> after <a href="https://www.newsweek.com/trump-teen-rape-allegation-national-enquirer-ronan-farrow-jane-doe-1465652" rel="noopener nofollow">death threats</a> and hacking of her lawyer’s site.</li>
+<li>Watch the video of her <strong><a href="https://www.youtube.com/watch?v=gnib-OORRRo" rel="noopener nofollow">Sworn testimony</a></strong> (2016)</li>
+</ul>
+</li>
+<li>Trump appeared on the show (Lifestyles of the Rich and Famous, 1994), and proceeded to talk sexualise his 1-year-old daughter. <a href="https://www.aol.com/remembering-donald-trump-cringe-worthy-223905325.html" rel="noopener nofollow">“Well,
+ I think she’s got a lot of Marla, she’s a really beautiful baby, – 
+She’s got Marla’s legs. We don’t know whether or not she’s got this part
+ yet, but time will tell,”</a> Trump added, gesturing at his chest to indicate breasts.</li>
+<li>Introducing 14-year-old Doe, Epstein’s first known victim, to Donald
+ J. Trump, Epstein elbowed Trump playfully asking him, referring to Doe,
+ <a href="https://www.courthousenews.com/wp-content/uploads/2020/01/Jeffrey-Epstein.pdf" rel="noopener nofollow">‘This
+ is a good one, right?’ Trump smiled and nodded in agreement. They both 
+chuckled and Doe felt uncomfortable, but, at the time, was too young to 
+understand why.</a></li>
+</ul>
+<p dir="auto"><strong>1995:</strong></p>
+<ul dir="auto">
+<li>E. Jean Carroll  describes running into Trump in a department store,
+ where she says he recognized her for her widely-read advice column. 
+Carroll says they went into a dressing room after Trump asked for her 
+advice on a present – lingerie – for another woman. Inside, she alleges 
+that he shoved her against a wall, <a href="https://www.pbs.org/newshour/politics/assault-allegations-donald-trump-recapped" rel="noopener nofollow">“forcing his fingers around my private area, thrusts his penis halfway — or completely, I’m not certain — inside me.”</a>
+<ul dir="auto">
+<li>In 2024, the <a href="https://www.theguardian.com/us-news/2023/aug/07/donald-trump-rape-language-e-jean-carroll" rel="noopener nofollow">Judge says E Jean Carroll allegation Trump raped her is ‘substantially true’</a> in court dismissal</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><strong>1996:</strong></p>
+<ul dir="auto">
+<li>Trump buys the Miss Universe Organization and <a href="https://www.rollingstone.com/politics/politics-features/a-timeline-of-donald-trumps-creepiness-while-he-owned-miss-universe-191860/" rel="noopener nofollow">gains control of the Miss USA and Miss Teen USA pageants</a>.</li>
+<li>On August 29, 1996, <a href="https://www.patreon.com/posts/maria-farmer-fbi-86555913?utm%5C_medium=clipboard%5C_copy&amp;utm%5C_source=copyLink&amp;utm%5C_campaign=postshare%5C_creator&amp;utm%5C_content=join%5C_link" rel="noopener nofollow">Maria Farmer reported the Epstein sex trafficking conspiracy to the FBI (“Maria’s 1996 FBI Report”)</a>.
+<ul dir="auto">
+<li>Recounting one of her first memories of life in Epstein’s orbit, 
+Maria said she remembered one particular interaction between Epstein and
+ President Donald Trump, during which Epstein <a href="https://lawandcrime.com/high-profile/jeffrey-epstein-accuser-when-donald-trump-eyed-me-epstein-remarked-shes-not-for-you/" rel="noopener nofollow">appeared to shoot down Trump after he allegedly ogled the 25-year-old Farmer. “she’s not for you.”</a>
+<ul dir="auto">
+<li>This was the <strong>first time</strong> she <a href="https://www.telegraph.co.uk/us/news/2025/07/21/epstein-victim-trump-fbi/" rel="noopener nofollow">urged the FBI to look into Trump</a>.</li>
+</ul>
+</li>
+<li><a href="https://xcancel.com/maddenifico/status/1947289362812543451" rel="noopener nofollow">Listen to Maria talk about driving around w/Ghislaine Maxwell and her best friend Ivana Trump</a>, cruising schools as Maxwell procured children for Jeffrey and Donald.</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><strong>1997:</strong></p>
+<ul dir="auto">
+<li>Mariah Billado, Miss Teen Vermont 1997 told BuzzFeed, <a href="https://www.rollingstone.com/politics/politics-features/a-timeline-of-donald-trumps-creepiness-while-he-owned-miss-universe-191860/" rel="noopener nofollow">“I
+ remember putting on my dress really quick because I was like, ‘Oh my 
+god, there’s a man in here.'” Three other teenage contestants from the 
+same year confirmed the story.</a>
+<ul dir="auto">
+<li>Billado told BuzzFeed she mentioned the incident to Trump’s daughter, Ivanka, who shrugged it off, saying, “Yeah, he does that.”</li>
+</ul>
+</li>
+<li>Trump and Epstein are spotted at a Victoria’s Secret “Angels” party in Manhattan <a href="https://xcancel.com/ByMikeBaker/status/1947316830458216531" rel="noopener nofollow">(left photo) and also photographed together at Mar-a-Lago (right photo).</a></li>
+<li>A <a href="https://www.newyorker.com/magazine/1997/05/19/trump-solo" rel="noopener nofollow">1997 New Yorker profile</a>
+ of Trump notes that the article’s author shared a ride to Palm Beach on
+ Trump’s private jet with Ghislaine Maxwell, as well as a teenage Eric 
+Trump.</li>
+</ul>
+<p dir="auto"><strong>1999</strong>:</p>
+<ul dir="auto">
+<li>Trump <a href="https://www.huffingtonpost.co.uk/entry/donald-trump-ivanka-trump-dating-promise_n_57ee98cbe4b024a52d2ead02" rel="noopener nofollow">said he promised his daughter he would not date girls younger than her</a>
+<ul dir="auto">
+<li><em>“I have a deal with her. She’s 17 and doing great ― Ivanka. She 
+made me promise, swear to her that I would never date a girl younger 
+than her,” Trump said. <strong>“So as she grows older, the field is getting very limited.”</strong></em></li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Trump_Model_Management" rel="noopener nofollow">Trump
+ Model Management, later shortened to T Management, was a New York 
+City-based modeling agency founded by Donald Trump as T Models in 1999</a>. It was closed by Trump in April 2017, shortly after he became U.S. president</li>
+</ul>
+<blockquote dir="auto">
+<p dir="auto">For a comprehensive breakdown and context to these early years, please see <a href="https://www.dailykos.com/stories/2016/10/6/1578544/-The-Untold-Story-of-Trump-Model-Management-A-Daily-Kos-Exclusive-Part-1" rel="noopener nofollow">“We All Knew About the Trafficking”-The Untold Story of Trump Model Management (Part 1)</a></p>
+</blockquote>
+<p dir="auto"><strong>late 90s</strong></p>
+<ul dir="auto">
+<li>Jeffrey Epstein showed off photos of Donald Trump with <a href="https://lavocedinewyork.com/en/news/2024/11/01/epstein-allegedly-showed-author-pictures-of-trump-with-topless-young-women/" rel="noopener nofollow">“topless young women”</a>
+ sitting in his lap, the author Michael Wolff alleged.  Epstein had 
+about half a dozen pictures which showed Trump by the pool with multiple
+ young women, Wolff claimed on his podcast They were taken in the “late 
+90s” at Epstein’s Palm Beach home, where he victimized dozens of 
+underage girls along with his procurer, Ghislaine Maxwell.</li>
+<li>Even without Epstein, it was pretty much known that Trump would 
+ensnare vulnerable underage models via his model agency constructions, 
+would invite them to parties at the Plaza Hotel, where they would be 
+given drugs and he would then fuck some of them. <a href="https://archive.is/G51zU" rel="noopener nofollow">I quote:</a>
+<ul dir="auto">
+<li>The girls were as young as 15, he says, and “over their heads, they 
+had no idea, and they ended up in situations. There were always dramas 
+because the men threw money and drugs at them to keep them enticed. It’s
+ based on power and dominating girls who can’t push back and can be 
+discarded. There’s always someone to pick them back up. Nobody wants to 
+call home and say ‘Help me.’”</li>
+<li>Trump would “go from room to room,” said the photographer, who added
+ that “I was there to party myself. It was guys with younger girls, sex,
+ a lot of sex, a lot of cocaine, top-shelf liquor” but no smoking. Trump
+ didn’t approve of cigarettes.</li>
+<li>Those men at these parties often knew each other. “It’s a small 
+community,” the photographer says. “They exchanged information, 
+facilitated each other. Trump was in and out. He’d wander off with a 
+couple girls. I saw him. He was getting laid like crazy. Trump was at 
+the heart of it. He loved the attention and in private, he was a total 
+fucking beast.” [12]</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><strong>2000:</strong></p>
+<ul dir="auto">
+<li><a href="https://www.politico.com/story/2019/08/09/epstein-mar-a-lago-trump-1456221" rel="noopener nofollow">Virginia Giuffre testified</a>
+ she was recruited at age 16 while working at Mar-a-Lago as a locker 
+room attendant. Maxwell approached her while she was reading a massage 
+book and offered her a job as Epstein’s traveling masseuse. This led to 
+trafficking.
+<ul dir="auto">
+<li>Trump later banned Epstein from Mar-a-Lago after another girl was allegedly assaulted.</li>
+<li>Trump also wrote a <a href="https://www.politico.com/story/2019/08/09/epstein-mar-a-lago-trump-1456221" rel="noopener nofollow">letter of recommendation</a> for Giuffre’s father.</li>
+</ul>
+</li>
+<li>Trump, his future wife Melania, Epstein and Maxwell were all <a href="https://www.politico.com/story/2019/07/21/jeffrey-epstein-trump-clinton-1424120" rel="noopener nofollow">photographed together at the club in 2000</a></li>
+</ul>
+<p dir="auto"><strong>2001:</strong></p>
+<ul dir="auto">
+<li>Former Miss Arizona, Tasha Dixon, Miss USA dressing room in 2001: <em>“<a href="https://www.rollingstone.com/politics/politics-features/a-timeline-of-donald-trumps-creepiness-while-he-owned-miss-universe-191860/" rel="noopener nofollow">He
+ just came strolling right in. There was no second to put a robe on or 
+any sort of clothing or anything. Some girls were topless, other girls 
+were naked</a>”</em></li>
+</ul>
+<p dir="auto"><strong>2002:</strong></p>
+<ul dir="auto">
+<li>In a <a href="https://nymag.com/nymetro/news/people/n_7912/" rel="noopener nofollow">interview with New York Magazine</a>,
+ Donald Trump said the following about Epstein: “I’ve known Jeff for 
+fifteen years. Terrific guy. He’s a lot of fun to be with. It is even 
+said that he likes beautiful women as much as I do, and many of them are
+ on the younger side."</li>
+</ul>
+<p dir="auto"><strong>2003:</strong></p>
+<p dir="auto">Trump allegedly authored a birthday letter to Epstein in the shape of a naked woman, with this dialogue:</p>
+<blockquote dir="auto">
+<p dir="auto">Voice Over: There must be more to life than having everything.</p>
+<p dir="auto">Donald: Yes, there is, but I won’t tell you what it is.</p>
+<p dir="auto">Jeffrey: Nor will I, since I also know what it is.</p>
+<p dir="auto">Donald: We have certain things in common, Jeffrey.</p>
+<p dir="auto">Jeffrey: Yes, we do, come to think of it.</p>
+<p dir="auto">Donald: Enigmas never age, have you noticed that?</p>
+<p dir="auto">Jeffrey: As a matter of fact, it was clear to me the last time I saw you.</p>
+<p dir="auto">Trump: A pal is a wonderful thing. Happy Birthday — and may every day be another wonderful secret</p>
+</blockquote>
+<p dir="auto">Trump’s signature appeared over the pubic area.</p>
+<ul dir="auto">
+<li><a href="https://www.wsj.com/politics/trump-jeffrey-epstein-birthday-letter-we-have-certain-things-in-common-f918d796" rel="noopener nofollow">WSJ verified</a> the letter.</li>
+<li>Trump now denies he’s ever drawn, despite <a href="https://www.reuters.com/world/us/trump-says-he-doesnt-draw-auctioned-sketches-suggest-otherwise-2025-07-19/" rel="noopener nofollow">selling signed doodles</a> around the same time.</li>
+<li>He is currently <a href="https://storage.courtlistener.com/recap/gov.uscourts.flsd.693830/gov.uscourts.flsd.693830.1.0_1.pdf" rel="noopener nofollow">suing WSJ</a> and <a href="https://www.reuters.com/world/us/trump-sues-wall-street-journal-over-epstein-report-seeks-10-billion-2025-07-19/" rel="noopener nofollow">WSJ says they will defend it</a>.</li>
+<li><a href="https://xcancel.com/TheDailyShow/status/1947628353348903414" rel="noopener nofollow">Trump claims he couldn’t have made Epstein’s creepy birthday card, but allow Jon Stewart to counter with exhibits A through Z</a></li>
+</ul>
+<p dir="auto"><strong>2004:</strong></p>
+<ul dir="auto">
+<li>They fell out over buying a Palm Beach mansion which <a href="https://eu.palmbeachdailynews.com/story/business/2004/11/16/trump-wins-gosman-mansion-for/6643188007/" rel="noopener nofollow">Trump won for $41 million</a> in a bidding war with Epstein</li>
+<li>Casablancas <a href="https://www.dailykos.com/stories/2016/10/6/1578544/-The-Untold-Story-of-Trump-Model-Management-A-Daily-Kos-Exclusive-Part-1" rel="noopener nofollow">joins the board of Trump Realty Brazil in 2004</a> and promotes the luxury Villa Trump resort near São Paulo.</li>
+<li>Police began investigating Epstein.</li>
+</ul>
+<p dir="auto"><strong>2005:</strong></p>
+<ul dir="auto">
+<li>In a <a href="https://www.snopes.com/news/2024/03/26/trump-pageant-dressing-rooms/#%3A%7E%3Atext=Well%2C+I%27ll+tell%2Cbeen+very+good." rel="noopener nofollow">2005 interview with Howard Stern</a>,
+ Trump boasted: I’ll go backstage before a show, and everyone’s getting 
+dressed and ready and everything else. …You know, no men are anywhere. 
+And I’m allowed to go in because I’m the owner of the pageant. And 
+therefore I’m inspecting it. …You know, they’re standing there with no 
+clothes. “Is everybody okay?” And you see these incredible-looking 
+women. And so I sort of get away with things like that.</li>
+</ul>
+<p dir="auto"><strong>2006:</strong></p>
+<ul dir="auto">
+<li>Epstein is <a href="https://apnews.com/article/epstein-maxwell-timeline-b9f15710fabb72e8581c71e94acf513e" rel="noopener nofollow">arrested</a> after being indicted on a charge of soliciting prostitution.</li>
+<li>Epstein’s Palm Beach message pads, seized by police in 2019, <a href="https://archive.is/4TH1S" rel="noopener nofollow">included multiple messages from Donald Trump</a>, placing him among Epstein’s “who’s who” of influential contacts.</li>
+<li>In 2006, <a href="https://archive.is/mPfEQ" rel="noopener nofollow">Ms Farmer claimed she <strong>again</strong> told the FBI to examine Mr Trump’s links to the late financier</a>.</li>
+</ul>
+<p dir="auto"><strong>2008:</strong></p>
+<ul dir="auto">
+<li>Epstein plea deal approved by <a href="https://www.cnn.com/2020/11/12/politics/department-of-justice-alex-acosta-epstein/index.html" rel="noopener nofollow">Alex Acosta</a>, Trump’s future Labor Secretary.</li>
+<li>The deal was widely condemned as over-generous: Epstein received 
+federal immunity, only served 13 months in county jail with 
+work-release, and victims weren’t notified, violating the Crime Victims’
+ Rights Act. <a href="https://www.miamiherald.com/news/local/article220097825.html" rel="noopener nofollow">Miami Herald investigation</a> confirmed misconduct.</li>
+</ul>
+<p dir="auto"><strong>2014-2016:</strong></p>
+<ul dir="auto">
+<li>Jeffrey Epstein <a href="https://www.independent.co.uk/news/world/americas/crime/jeffrey-epstein-trump-2016-election-b2402643.html" rel="noopener nofollow">arranged several meetings with people close to Donald Trump</a>
+ during the former president’s 2016 campaign, including invited Trump’s 
+campaign backers Thomas Barrack and Peter Thiel to lunch with Russian 
+diplomat Vitaly Churkin.</li>
+</ul>
+<p dir="auto"><strong>2015:</strong></p>
+<ul dir="auto">
+<li>Gawker <a href="https://web.archive.org/web/0/https://gawker.com/here-is-pedophile-billionaire-jeffrey-epsteins-little-b-1681383992" rel="noopener nofollow">publishes</a>
+ the contents of Epstein’s address book, redacting personal contact 
+information. Ivana Trump, Ivanka Trump and Donald Trump’s brother are 
+included — as are 14 numbers associated with Trump himself, including 
+numbers for Melania and Mar-a-Lago, and personal staff, suggesting a 
+deeper level of familiarity.</li>
+</ul>
+<p dir="auto"><strong>2016:</strong></p>
+<ul dir="auto">
+<li><a href="https://www.motherjones.com/politics/2016/08/donald-trump-model-management-illegal-immigration/" rel="noopener nofollow">Trump Model Management</a>
+ was exposed for hiring teen models on tourist visas, forcing them into 
+unpaid labor, and housing them in overcrowded conditions. Some were 
+allegedly offered to Trump. The agency allegedly encouraged young 
+models, some as young as 14, to lie about their ages to secure work. 
+Former models reported feeling pressured into situations with older 
+clients, including at events attended by Trump.
+<ul dir="auto">
+<li><a href="https://www.dailykos.com/stories/2016/10/6/1578544/-The-Untold-Story-of-Trump-Model-Management-A-Daily-Kos-Exclusive-Part-1" rel="noopener nofollow">“We All Knew About the Trafficking”-The Untold Story of Trump Model Management</a></li>
+</ul>
+</li>
+<li>Trump asked an unnamed person with whom columnist Richard Cohen was familiar, about his then-13-year-old kid <a href="https://www.snopes.com/fact-check/trump-sexually-attracted-ivanka/" rel="noopener nofollow">“Is it wrong to be more sexually attracted to your own daughter than your wife?”</a></li>
+<li>Trump, then 59, bragging about how he got a rise out of grabbing young married women <a href="https://www.youtube.com/watch?v=wFEqVARTYkY&amp;t=8s" rel="noopener nofollow">“by the pussy”.</a></li>
+</ul>
+<p dir="auto"><strong>2017:</strong></p>
+<ul dir="auto">
+<li><a href="https://apnews.com/article/donald-trump-us-news-ap-top-news-mitch-mcconnell-north-america-0b693961af1e4917b54a81b054bbefdc" rel="noopener nofollow">Trump endorsed a pedophile, Roy Moore, for office. Heartily</a></li>
+</ul>
+<p dir="auto"><strong>2018:</strong></p>
+<ul dir="auto">
+<li><a href="https://www.hindustantimes.com/world-news/us-news/jeffrey-epstein-had-real-dirt-on-donald-trump-and-hillary-clinton-that-could-have-cancelled-the-2016-election-101727516769684.html" rel="noopener nofollow">Mark Epstein</a>
+ said that his brother told him, ““‘If I [Jeffrey] said what I know 
+about both candidates, they’d have to cancel the [2016] election.’”
+<ul dir="auto">
+<li>This was corroborated in a 2024 deposition by an Epstein associate, 
+who claimed Jeffrey had compromising material on Trump involving “young 
+women”.</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><strong>2019:</strong></p>
+<ul dir="auto">
+<li>Aides said Trump <a href="https://www.seattletimes.com/nation-world/trumps-lewd-talk-about-daughter-ivanka-in-front-of-white-house-staff-recalled-in-new-book/" rel="noopener nofollow">talked about Ivanka Trump’s breasts, her backside, and what it might be like to have sex with her</a>, remarks that prompted Kelly [Trump’s Chief of Staff] to remind the president that Ivanka was his daughter.</li>
+<li>Epstein was arrested for sex trafficking and died in jail.
+<ul dir="auto">
+<li>Two of the guards assigned to Epstein were <a href="https://www.npr.org/2019/11/19/780794931/prosecutors-charge-correctional-officers-who-guarded-jeffrey-epstein-before-his-" rel="noopener nofollow">indicted</a> on charges of falsifying records.</li>
+</ul>
+</li>
+<li>Trump claimed “I was not a fan.”</li>
+<li>He later said, <a href="https://www.youtube.com/watch?v=NkrnWRIavAU" rel="noopener nofollow">“I just wish her well”</a> about Ghislaine Maxwell.</li>
+<li>U.S. attorney general Bill Barr, appointed by Trump <a href="https://www.forbes.com/sites/lisettevoytko/2019/07/09/bill-barr-wont-recuse-himself-from-epstein-sex-trafficking-case/" rel="noopener nofollow">refused recuse himself</a>
+ in Jeffrey Epstein’s sex trafficking and conspiracy case, despite 
+Barr’s previous assurance he would, given Barr worked at a law firm that
+ represented Epstein, as well as a family connection between the two men
+ stretching back decades.
+<ul dir="auto">
+<li>Epstein was a protégé of Donald Barr, the father of Trump’s Attorney
+ General Bill Barr. Donald was an officer in the O.S.S. during World War
+ II, the forerunner of the C.I.A., while Bill was in the C.I.A. from 
+1971 to 1977. From 1964 to 1974, Donald was headmaster of the 
+“prestigious” Dalton School in NYC. <a href="https://billmoyers.com/story/how-far-do-the-tentacles-of-the-jeffrey-epstein-case-extend/" rel="noopener nofollow">He arranged for Epstein, a college dropout, to teach high school calculus and physics</a>. Even then, students <a href="https://www.nytimes.com/2019/07/12/nyregion/jeffrey-epstein-dalton-teacher.html" rel="noopener nofollow">noted his willingness to violate norms in his encounters with girls</a></li>
+</ul>
+</li>
+<li><a href="https://www.independent.co.uk/news/world/americas/george-nader-trump-sex-crimes-child-pedophile-mueller-russia-investigation-a9283756.html" rel="noopener nofollow">George Nader: Ex-Trump adviser and ‘lifelong paedophile’ pleads guilty to sex crimes</a></li>
+</ul>
+<p dir="auto"><strong>2020:</strong></p>
+<ul dir="auto">
+<li>Epstein’s longtime confidante Ghislaine Maxwell is charged with 
+conspiring to help Epstein abuse minors. The timeframe of the Maxwell 
+allegations span 1994 to 1997.</li>
+<li>Fox News <a href="https://www.washingtonpost.com/opinions/2020/07/06/fox-news-apologizes-error-removing-trump-photo-jeffrey-epstein-ghislaine-maxwell/" rel="noopener nofollow">airs a photo</a> of Epstein and Maxwell in which Trump has been edited out.</li>
+</ul>
+<p dir="auto"><strong>2021:</strong></p>
+<ul dir="auto">
+<li>Ghislaine Maxwell was tried in the U.S. District Court for the 
+Southern District of New York from  Nov  2021 to Dec  2021, when a jury 
+found her guilty on five of six counts—including sex‑trafficking 
+minors—and she was later sentenced on 28 June 2022 to 20 years in 
+federal prison, a $750 000 fine, and five years of supervised release.</li>
+</ul>
+<p dir="auto"><strong>2022:</strong></p>
+<ul dir="auto">
+<li>Jean-Luc Brunel, found dead in his French prison cell in an apparent suicide, <a href="https://abcnews.go.com/International/jeffrey-epstein-associate-jean-luc-brunel-found-dead/story?id=83001807" rel="noopener nofollow">was a suspected co-conspirator of Epstein’s.</a>. He lived in Trump tower, <a href="https://www.miamiherald.com/news/state/florida/article247937055.html" rel="noopener nofollow">knew Trump and partied with him as well</a>. Brunel was regarded as an <a href="https://www.miamiherald.com/news/state/florida/article247937055.html" rel="noopener nofollow">unadulterated piece of shit</a>, even by some of his fellow predators like Trump-associate Casablancas. <a href="https://www.theguardian.com/us-news/2019/sep/07/thysia-huisman-describes-alleged-by-jean-luc-brunel" rel="noopener nofollow">He was known for date-raping young models</a>.</li>
+</ul>
+<p dir="auto"><strong>2023</strong></p>
+<ul dir="auto">
+<li><a href="https://www.nbcnews.com/news/us-news/former-model-claims-lawsuit-she-was-raped-teenager-agency-executive-n1276818" rel="noopener nofollow">A
+ former Elite model files suit claiming Casablancas raped her at 15 and 
+forced an abortion; Elite settles, then declares bankruptcy in 2003</a>.</li>
+<li>On May 9, 2023, a civil jury unanimously found Donald Trump guilty 
+of sexually assaulting E. Jean Carroll, who accused him of raping her in
+ a department store dressing room in the mid-1990s. During a 2022 
+deposition for the case Trump said, “[Carroll] indicated that she loved 
+it, OK?”; and earlier was apparently unable to differentiate his wife at
+ the time, Marla Maples, from that of Carroll in a photo of the three of
+ them together in the 1990s. The jury awarded Carroll over $83 million 
+in damages.</li>
+<li>A 2023 investigation by Senator Wyden into Jeffrey Epstein’s 
+finances revealed that several high-profile Trump donors, including Leon
+ Black and Peter Thiel, had significant financial ties to Epstein. This 
+suggests an indirect financial network where the worlds of Trump’s major
+ political backers and Epstein’s finances were closely linked.</li>
+</ul>
+<p dir="auto"><strong>2024:</strong></p>
+<ul dir="auto">
+<li>Epstein <a href="https://archive.is/WJOJb#selection-527.14-529.114" rel="noopener nofollow">told Michael Wolff on tape that Trump was his  “closest friend”</a> and claimed intimate knowledge of his proclivity for sex, including cuckolding his best friends.</li>
+<li>While campaigning, Trump initially said ‘Yes’ to releasing the files, but then went on to say he <em>might</em> release them, as he worried about “phony stuff” in it that could hurt reputations. Fox News <a href="https://www.huffpost.com/entry/donald-trump-jeffrey-epstein-fox-news_n_6667330de4b019027bc727f4/amp" rel="noopener nofollow">edited this out</a> to look like he said ‘Yes’.</li>
+<li>Trumps spiritual advisor, <a href="https://www.npr.org/2024/06/24/nx-s1-5017881/robert-morris-gateway-church-sex-abuse-scandal-explained" rel="noopener nofollow">confesses to ‘moral failure’ after woman claims he began molesting her at age 12</a></li>
+</ul>
+<p dir="auto"><strong>2025:</strong></p>
+<ul dir="auto">
+<li>Apr 25:
+<ul dir="auto">
+<li>Virginia Giuffre, one of Jeffrey Epstein’s most prominent abuse survivors, who was recruited in Mar-a-lago <a href="https://www.nbcnews.com/news/us-news/virginia-giuffre-one-jeffrey-epsteins-prominent-abuse-survivors-dies-s-rcna203027" rel="noopener nofollow">dies by suicide</a></li>
+</ul>
+</li>
+<li>Feb 7:
+<ul dir="auto">
+<li>Attorney General Pamela Bondi released the <a href="https://www.justice.gov/opa/pr/attorney-general-pamela-bondi-releases-first-phase-declassified-epstein-files" rel="noopener nofollow">‘First Phase’ of Declassified Epstein Files</a> (which contained almost no new information regarding convicted sex offender and financier Jeffrey Epstein)</li>
+</ul>
+</li>
+<li>Feb. 21:
+<ul dir="auto">
+<li>Bondi tells Fox News’s John Roberts that a list of Epstein’s clients is <a href="https://www.foxnews.com/politics/bondi-says-epstein-client-list-sitting-my-desk-right-now-reviewing-jfk-mlk-files" rel="noopener nofollow">“sitting on my desk right now to review.”</a> Several other administration officials, including FBI Director Kash Patel, offer assurances in right-wing media <a href="https://www.washingtonpost.com/politics/2025/07/08/jeffrey-epstein-bondi-patel-trump/" rel="noopener nofollow">at different times</a> that the evidence will be presented.</li>
+</ul>
+</li>
+<li>Feb 28:
+<ul dir="auto">
+<li>In a <a href="https://www.bbc.co.uk/news/articles/cyvee9rpdq6o" rel="noopener nofollow">public letter, Attorney General Pam Bondi accused federal investigators</a>
+ of withholding thousands of documents related to Epstein, and asked the
+ FBI to release all the information by Friday morning without any 
+omissions.</li>
+</ul>
+</li>
+<li>June 5:
+<ul dir="auto">
+<li>Musk tweeted:  “Time to drop the really big bomb: Donald Trump is in
+ the Epstein files. That is the real reason they have not been made 
+public.” “Mark this post for the future. The truth will come out.”</li>
+</ul>
+</li>
+<li>July 7:
+<ul dir="auto">
+<li>MAGA world erupts over DOJ memo that no client list or blackmail evidence existed and the investigation was being closed.
+<ul dir="auto">
+<li><strong>Prior to this, It’s standard DOJ protocol to avoid 
+compromising witnesses, active leads, or uncharged co-conspirators. 
+Releasing files mid-investigation could tank prosecutions.</strong> Hence, the lack of  action from the Democrats doesn’t mean much here. (DOJ is also supposed to be independent)</li>
+</ul>
+</li>
+<li>An Epstein death-cell <a href="https://www.wired.com/story/the-fbis-jeffrey-epstein-prison-video-had-nearly-3-minutes-cut-out/" rel="noopener nofollow">video was released</a> with three minutes missing and metadata showing the tape was edited and saved multiple times</li>
+</ul>
+</li>
+<li>July 8:
+<ul dir="auto">
+<li>In a Cabinet meeting, with reporters present, Trump interrupted a 
+question on the topic, saying: “Are you still talking about Jeffrey 
+Epstein? This guy’s been talked about for years. You’re asking — we have
+ Texas, we have this, we have all of the things. And are people still 
+talking about this guy, this creep? That is unbelievable.”</li>
+</ul>
+</li>
+<li>July 12:
+<ul dir="auto">
+<li>The president took to Truth Social and, in <strong><a href="https://i.imgur.com/NtqzENW.png" rel="noopener nofollow">an extraordinarily lengthy post</a></strong>,
+ defended Bondi amid continued calls for her resignation from his base. 
+“What’s going on with my ‘boys’ and, in some cases, ‘gals?’” “We have a 
+PERFECT Administration, THE TALK OF THE WORLD, and ‘selfish people’ are 
+trying to hurt it, all over a guy who never dies, Jeffrey Epstein,” 
+Trump protested.</li>
+</ul>
+</li>
+<li>July 15:
+<ul dir="auto">
+<li>Trump says Bondi should release ‘whatever she thinks is credible’. 
+He added, “And in terms of the credibility of the different things that 
+they’ve seen, and I would say that, you know, these files were made up 
+by Comey, they were made up by <a href="https://www.independent.co.uk/news/world/americas/us-politics/trump-epstein-files-obama-comey-b2789624.html" rel="noopener nofollow">Obama, they were made up by the Biden</a>
+ administration – and you know, we and we went through years of that 
+with the Russia, Russia, Russia hoax, with all of the different things 
+that we had to go through,” Trump said.</li>
+<li><a href="https://fox11online.com/news/nation-world/gop-blocks-house-vote-aimed-at-releasing-epstein-case-documents" rel="noopener nofollow">GOP blocks House vote aimed at releasing Epstein case documents</a>.</li>
+<li>Congress <a href="https://xcancel.com/unusual_whales/status/1945192389770948647" rel="noopener nofollow">voted to deny the amendment to release of the Epstein files</a>.</li>
+</ul>
+</li>
+<li>July 16:
+<ul dir="auto">
+<li><a href="https://www.dailywire.com/news/trump-says-epstein-story-is-kept-alive-by-pretty-bad-people-including-fake-news" rel="noopener nofollow">Trump Says Epstein Story Is Kept Alive By ‘Pretty Bad People, Including Fake News’</a></li>
+</ul>
+</li>
+<li>July 17:
+<ul dir="auto">
+<li><a href="https://www.theguardian.com/us-news/2025/jul/16/maurene-comey-fired-sources" rel="noopener nofollow">Maurene Comey: prosecutor in Jeffrey Epstein case fired by DoJ</a>.
+<ul dir="auto">
+<li>Maurene Comey described <a href="https://legacy.www.documentcloud.org/documents/25997444-comeydecradarfoia013024/" rel="noopener nofollow">at great length</a> the risks posed by releasing files before Maxwell’s appeals are exhausted.</li>
+</ul>
+</li>
+<li>Trump refuses to name special counsel for Epstein case <a href="https://www.politico.com/news/2025/07/17/trump-esptein-special-counsel-00460146" rel="noopener nofollow">per WH</a></li>
+</ul>
+</li>
+<li>July 18:
+<ul dir="auto">
+<li>Ordered AG Pam Bondi to seek court release of <a href="https://www.cbsnews.com/news/trump-orders-bondi-to-release-jeffrey-epstein-related-grand-jury-testimony/" rel="noopener nofollow">“any and all pertinent grand jury testimony”</a>
+<ul dir="auto">
+<li>(Grand jury testimony is not evidence. It is testimonial remarks from witnesses called by attorneys.)</li>
+<li>DOJ filed motions to unseal testimony, courts warned redactions would apply.</li>
+</ul>
+</li>
+<li>Trump directed FBI to <a href="https://www.axios.com/2025/07/18/epstein-documents-trump-fbi-senator" rel="noopener nofollow">flag every Epstein document mentioning him</a>
+<ul dir="auto">
+<li><a href="https://xcancel.com/youranoncentral/status/1946402143398985907" rel="noopener nofollow">Trump said</a>: “They’ve been running these files, and so much of the things that we found were fake with me.”</li>
+<li><a href="https://www.muellershewrote.com/p/the-epstein-cover-up-at-the-fbi" rel="noopener nofollow">Inside the chaotic review process of the Epstein and Maxwell files at the Bureau</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Jul 19:
+<ul dir="auto">
+<li>In an obvious distraction, Gabbard claims Obama tried to ‘subvert’ Americans’ will with Russia hoax <a href="https://www.theguardian.com/us-news/2025/jul/18/tulsi-gabbard-obama-2016-election-russia" rel="noopener nofollow">and called for him to be prosecuted</a> over 2016 election claims on Russian interference. (There is no evidence of this)</li>
+<li>NYTimes releases <a href="https://www.nytimes.com/2025/07/19/us/politics/inside-trump-epstein-friendship.html?unlocked_article_code=1.Xk8.bYi_.zKvtMPuNci1B" rel="noopener nofollow">Inside the Long Friendship Between Trump and Epstein</a></li>
+</ul>
+</li>
+<li>Jul 20
+<ul dir="auto">
+<li><a href="https://www.nbcnews.com/tech/internet/maga-ai-bot-network-divided-trump-epstein-backlash-rcna219167" rel="noopener nofollow">Researchers just caught</a>
+ a swarm of ~400 AI-driven MAGA sock-puppets on X. For a year they’ve 
+lurked in reply threads, spamming praise for Trump, RFK Jr. &amp; 
+Karoline Leavitt to juice the echo chamber. Then the Epstein-files 
+fiasco hit—and the bots glitched, arguing with each other about Pam 
+Bondi.  That split blew the whole op wide open, proving it’s all cheap 
+AI astroturf.</li>
+</ul>
+</li>
+<li>Jul 21
+<ul dir="auto">
+<li><a href="https://www.politico.com/news/2025/07/21/journal-removed-white-house-pool-epstein-00465548" rel="noopener nofollow">White House removes WSJ from Scotland press pool after Epstein article</a></li>
+<li><a href="https://xcancel.com/JakeSherman/status/1947433023315837168" rel="noopener nofollow">RALPH
+ NORMAN, hardline conservative on the House Rules Committee, says the 
+panel will not report a rule this week for bills, effectively shutting 
+down the house floor. Why?  He doesn’t want to vote on Democrats’ 
+Epstein amendments. He says it’s grandstanding.</a></li>
+<li><a href="https://xcancel.com/Acyn/status/1947378240626299083" rel="noopener nofollow">Trump’s throws Kash Patel and the FBI under the bus to avoid responsibility for release of the Epstein files</a>.</li>
+</ul>
+</li>
+<li>Jul 22
+<ul dir="auto">
+<li>Trump blasts Republican Thomas Massie as <a href="https://www.foxnews.com/politics/trump-blasts-massie-the-worst-republican-congressman-says-hes-seeking-challenger-support" rel="noopener nofollow">‘the worst Republican Congressman’</a> and says he’s seeking a challenger to support, presumably in response to his statement on July 15th, <a href="https://ijr.com/thomas-massie-says-he-will-force-vote-on-releasing-epstein-files/" rel="noopener nofollow">Thomas Massie ® Says He Will Force Vote On Releasing Epstein Files</a>.</li>
+<li>House Speaker Mike Johnson backtracks on his push for Epstein files release saying <a href="https://www.independent.co.uk/news/world/americas/us-politics/mike-johnson-jeffrey-epstein-files-trump-b2793615.html" rel="noopener nofollow">Trump needs ‘space’</a></li>
+</ul>
+</li>
+</ul>
+<p dir="auto">There really seems to be an endless amount of dirt on this
+ sleazebag. Some more overviews here as this post would end up as a book
+ otherwise.</p>
+<ul dir="auto">
+<li><a href="https://medium.com/@mistagrinch/an-unsettling-pattern-a-comprehensive-look-at-trumps-sexual-controversies-and-underworld-a876887ecd85" rel="noopener nofollow">An Unsettling Pattern: A Comprehensive Look at Trump’s Sexual Controversies and Underworld Connections</a></li>
+<li><a href="https://www.dailykos.com/stories/2016/10/6/1578544/-The-Untold-Story-of-Trump-Model-Management-A-Daily-Kos-Exclusive-Part-1" rel="noopener nofollow">“We All Knew About the Trafficking”-The Untold Story of Trump Model Management (Part 1)</a></li>
+<li><a href="https://www.mintpressnews.com/shocking-origins-jeffrey-epstein-blackmail-roy-cohn/260621/" rel="noopener nofollow">HIDDEN IN PLAIN SIGHT: THE SHOCKING ORIGINS OF THE JEFFREY EPSTEIN CASE</a></li>
+</ul>
+<blockquote dir="auto">
+
+      </div>
+
+      <div>
+        <div class="reader-message"></div>
+      </div>
+      <div aria-owns="toolbar"></div>
+    </div>
+  
+
+</body></html>

@@ -1,0 +1,2 @@
+@keyframes show-success-message{0%{opacity:0;transform:translateY(10px)}80%{opacity:1;transform:translateY(0)}to{opacity:0;transform:translateY(-10px)}}.copy-success{animation:show-success-message 1s cubic-bezier(.175,.885,.32,1.275)}.jac-sandbox-container iframe{position:relative;width:100vw!important}@media (min-width:640px){.jac-container,.jac-sandbox-container{width:auto!important}.jac-sandbox-container iframe{width:100%!important}}
+/*# sourceMappingURL=54e5643999040842.css.map*/
